@@ -128,7 +128,7 @@ export default function AboutPageOne() {
       <div className="my-8 flex flex-col gap-y-6 md:flex-row lg:justify-around">
         {locations.map((location) => (
           <div
-            key={location.title}
+            key={Math.random()}
             className="flex flex-col space-y-3 md:w-2/4 lg:w-1/5"
           >
             <MapPin className="h-5 w-5" />
@@ -157,7 +157,7 @@ export default function AboutPageOne() {
       {/* Instractor */}
       <div className="grid grid-cols-1 gap-4 gap-y-6 border-b border-gray-300 py-12 pb-20 md:grid-cols-2 lg:grid-cols-4">
         {users.map((user) => (
-          <div className="rounded-md border" key={user.name}>
+          <div className="rounded-md border" key={Math.random()}>
             <Image
               src={user.image}
               alt={user.name}
@@ -215,7 +215,7 @@ export default function AboutPageOne() {
                     <div className="mt-4">
                       {dev.skills.map((skill, i) => {
                         return (
-                          <span className="mb-2 mr-2 inline-block rounded-full bg-gray-100 px-3 py-1 text-[10px] font-semibold text-gray-900">
+                          <span key={i} className="mb-2 mr-2 inline-block rounded-full bg-gray-100 px-3 py-1 text-[10px] font-semibold text-gray-900">
                             {`#${skill}`}
                           </span>
                         );
