@@ -1,5 +1,6 @@
 /** @format */
 
+import Image from "next/image";
 import React from "react";
 
 export function HomeHeader() {
@@ -9,7 +10,7 @@ export function HomeHeader() {
         <div className="mx-auto max-w-4xl">
           <div className="md:flex md:items-center md:justify-center md:space-x-14">
             <div className="relative h-48 w-48 flex-shrink-0">
-              <img
+              <Image
                 className="relative h-48 w-48 rounded-full object-cover"
                 src="https://scontent.fpat1-1.fna.fbcdn.net/v/t39.30808-6/298100636_3266597176939669_8064129111758171061_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=49d041&_nc_ohc=2WkRGzoKfaMAX8-C3AU&_nc_ht=scontent.fpat1-1.fna&oh=00_AfBhBmrUy_9ipMiz2Q4Tqn1vV8qr3oxA6REm99diCdyZHw&oe=650D181E"
                 alt=""
@@ -52,22 +53,22 @@ export function HomeHeader() {
           </blockquote>
           <figcaption className="mt-10 flex items-center gap-x-6">
             <div className="isolate flex -space-x-2">
-              <img
+              <Image
                 className="relative z-30 inline-block h-10 w-10 rounded-full ring-2 ring-white"
                 src="https://overreacted.io/static/profile-pic-c715447ce38098828758e525a1128b87.jpg"
                 alt="Dan_Abromov"
               />
-              <img
+              <Image
                 className="relative z-20 inline-block h-10 w-10 rounded-full ring-2 ring-white"
                 src="https://res.cloudinary.com/crunchbase-production/image/upload/c_thumb,h_170,w_170,f_auto,g_faces,z_0.7,b_white,q_auto:eco,dpr_1/smokhfs2uevnppc2bmwl"
                 alt="Guillermo_Rauch"
               />
-              <img
+              <Image
                 className="relative z-10 inline-block h-10 w-10 rounded-full ring-2 ring-white"
                 src="https://leerob.io/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.b1d1472f.jpg&w=256&q=75"
                 alt="Lee_Robinson"
               />
-              <img
+              <Image
                 className="relative z-0 inline-block h-10 w-10 rounded-full ring-2 ring-white"
                 src="https://nextjs.org/_next/image?url=https%3A%2F%2Fwww.datocms-assets.com%2F35255%2F1665059775-delba.jpg&w=640&q=75"
                 alt="Delba"

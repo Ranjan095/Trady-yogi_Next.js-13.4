@@ -12,6 +12,7 @@ import {
   Plus,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const menuItems = [
   {
@@ -117,7 +118,7 @@ export default function AboutPageOne() {
         </p>
       </div>
       <div className="w-full space-y-4">
-        <img
+        <Image
           className="h-[200px] w-full rounded-xl object-cover md:h-full"
           src="https://dev-ui-image-assets.s3.ap-south-1.amazonaws.com/google-map.jpg"
           alt=""
@@ -157,7 +158,7 @@ export default function AboutPageOne() {
       <div className="grid grid-cols-1 gap-4 gap-y-6 border-b border-gray-300 py-12 pb-20 md:grid-cols-2 lg:grid-cols-4">
         {users.map((user) => (
           <div className="rounded-md border" key={user.name}>
-            <img
+            <Image
               src={user.image}
               alt={user.name}
               className=" w-full rounded-lg object-cover "
@@ -189,7 +190,7 @@ export default function AboutPageOne() {
                 className="flex max-w-3xl flex-col border items-center rounded-md  md:flex-row my-3"
               >
                 <div className="h-full w-full ">
-                  <img
+                  <Image
                     src={dev.image}
                     alt={dev.name}
                     className="h-full w-full rounded-md object-cover"
@@ -269,7 +270,7 @@ export default function AboutPageOne() {
           </button>
         </div>
         <div className="md:mt-o mt-10 w-full">
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1605165566807-508fb529cf3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
             alt="Getting Started"
             className="rounded-lg"

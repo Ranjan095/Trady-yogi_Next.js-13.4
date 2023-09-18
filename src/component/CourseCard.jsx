@@ -1,12 +1,13 @@
 /** @format */
 
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 const CourseCard = ({ title, _id, price, description, image }) => {
   return (
     <div className="border">
-      <img src={image} className="aspect-video w-full rounded-md" alt="" />
+      <Image src={image} className="aspect-video w-full rounded-md" alt="" />
       <div className="min-h-min p-3">
         <p className="mt-4 w-full text-xs font-semibold leading-tight text-gray-700">
           #{"Yoga"}

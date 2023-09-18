@@ -1,58 +1,63 @@
-'use client'
+/** @format */
 
-import React from 'react'
-import { Menu, X, MapPin } from 'lucide-react'
+"use client";
+
+import React from "react";
+import { Menu, X, MapPin } from "lucide-react";
+import Image from "next/image";
 
 const menuItems = [
   {
-    name: 'Home',
-    href: '#',
+    name: "Home",
+    href: "#",
   },
   {
-    name: 'About',
-    href: '#',
+    name: "About",
+    href: "#",
   },
   {
-    name: 'Contact',
-    href: '#',
+    name: "Contact",
+    href: "#",
   },
-]
+];
 
 const locations = [
   {
-    title: 'Bengaluru office',
-    timings: 'Mon-Sat 9am to 5pm.',
-    address: '100, Electronic City Phase-1, Bengaluru, Karnataka 560100 IN',
+    title: "Bengaluru office",
+    timings: "Mon-Sat 9am to 5pm.",
+    address: "100, Electronic City Phase-1, Bengaluru, Karnataka 560100 IN",
   },
   {
-    title: 'Head office',
-    timings: 'Mon-Sat 9am to 5pm.',
-    address: '12th Main Rd, Indiranagar, Bengaluru, Karnataka 560008 IN',
+    title: "Head office",
+    timings: "Mon-Sat 9am to 5pm.",
+    address: "12th Main Rd, Indiranagar, Bengaluru, Karnataka 560008 IN",
   },
   {
-    title: 'Karnataka office',
-    timings: 'Mon-Sat 9am to 5pm.',
-    address: '42, Residency Rd, Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka 560025 IN',
+    title: "Karnataka office",
+    timings: "Mon-Sat 9am to 5pm.",
+    address:
+      "42, Residency Rd, Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka 560025 IN",
   },
-]
+];
 
 export default function ContactPage() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false)
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <div>
-
       <div className="mx-auto max-w-7xl px-4">
         <div className="mx-auto max-w-7xl py-12 md:py-24">
           <div className="grid items-center justify-items-center gap-x-4 gap-y-10 lg:grid-cols-2">
             {/* contact from */}
             <div className="flex items-center justify-center">
               <div className="px-2 md:px-12">
-                <p className="text-2xl font-bold text-gray-900 md:text-4xl">Get in touch</p>
+                <p className="text-2xl font-bold text-gray-900 md:text-4xl">
+                  Get in touch
+                </p>
                 <p className="mt-4 text-lg text-gray-600">
                   Our friendly team would love to hear from you.
                 </p>
@@ -138,7 +143,7 @@ export default function ContactPage() {
                 </form>
               </div>
             </div>
-            <img
+            <Image
               alt="Contact us"
               className="hidden max-h-full w-full rounded-lg object-cover lg:block"
               src="https://images.unsplash.com/photo-1543269664-56d93c1b41a6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fGhhcHB5JTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
@@ -152,13 +157,17 @@ export default function ContactPage() {
           <div className="py-20">
             <div className="grid grid-cols-1 gap-x-20 gap-y-8 lg:grid-cols-2">
               <div className="space-y-4">
-                <p className="w-full text-4xl font-bold text-gray-900">Our Offices</p>
-                <p className="w-full text-lg text-gray-600">Find us at these locations.</p>
-                <img
-              alt="Contact us"
-              className="hidden max-h-full w-full rounded-lg object-cover lg:block"
-              src="https://images.pexels.com/photos/380768/pexels-photo-380768.jpeg?auto=compress&cs=tinysrgb&w=600"
-            />
+                <p className="w-full text-4xl font-bold text-gray-900">
+                  Our Offices
+                </p>
+                <p className="w-full text-lg text-gray-600">
+                  Find us at these locations.
+                </p>
+                <Image
+                  alt="Contact us"
+                  className="hidden max-h-full w-full rounded-lg object-cover lg:block"
+                  src="https://images.pexels.com/photos/380768/pexels-photo-380768.jpeg?auto=compress&cs=tinysrgb&w=600"
+                />
               </div>
               <div className="space-y-4 divide-y-2">
                 {locations.map((location) => (
@@ -166,9 +175,15 @@ export default function ContactPage() {
                     key={location.title}
                     className="flex flex-col space-y-2 pt-4 first:pt-0 lg:w-full"
                   >
-                    <p className="w-full text-xl font-semibold  text-gray-900">{location.title}</p>
-                    <p className="w-full text-base  text-gray-600">{location.timings}</p>
-                    <p className="text-sm font-semibold text-gray-600">{location.address}</p>
+                    <p className="w-full text-xl font-semibold  text-gray-900">
+                      {location.title}
+                    </p>
+                    <p className="w-full text-base  text-gray-600">
+                      {location.timings}
+                    </p>
+                    <p className="text-sm font-semibold text-gray-600">
+                      {location.address}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -177,8 +192,6 @@ export default function ContactPage() {
         </div>
       </div>
       <hr className="mt-6" />
-     
-     
     </div>
-  )
+  );
 }

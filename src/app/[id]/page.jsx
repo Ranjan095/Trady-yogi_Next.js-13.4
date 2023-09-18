@@ -5,6 +5,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { caculateOffer } from "@/halpers/offer";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function CourseOverview({ params }) {
   let [data, setData] = useState([]);
@@ -25,9 +26,9 @@ export default function CourseOverview({ params }) {
       });
   };
 
-  useEffect(() => {
-    getData();
-  }, []);
+  // useEffect(() => {
+  getData();
+  // }, []);
   return loading ? (
     <div className=" text-center mt-3 h-screen items-center ">
       <button className="place-self-center " type="button" disabled>
@@ -38,7 +39,7 @@ export default function CourseOverview({ params }) {
     <section className="overflow-hidden">
       <div className="mx-auto max-w-5xl px-5 py-24">
         <div className="mx-auto flex flex-wrap items-center lg:w-4/5">
-          <img
+          <Image
             alt="course image"
             className="h-full w-full rounded object-cover lg:h-96 lg:w-1/2"
             src={data.image}
