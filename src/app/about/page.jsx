@@ -215,7 +215,10 @@ export default function AboutPageOne() {
                     <div className="mt-4">
                       {dev.skills.map((skill, i) => {
                         return (
-                          <span key={i} className="mb-2 mr-2 inline-block rounded-full bg-gray-100 px-3 py-1 text-[10px] font-semibold text-gray-900">
+                          <span
+                            key={Math.random()}
+                            className="mb-2 mr-2 inline-block rounded-full bg-gray-100 px-3 py-1 text-[10px] font-semibold text-gray-900"
+                          >
                             {`#${skill}`}
                           </span>
                         );
